@@ -1,0 +1,22 @@
+#INGESTAO DE DADOS
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/races.csv' OVERWRITE INTO TABLE races;
+LOAD DATA INPATH '/user/wellington_leal/datasets/races.csv' OVERWRITE INTO TABLE races;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/results.csv' OVERWRITE INTO TABLE results;
+LOAD DATA INPATH '/user/wellington_leal/datasets/results.csv' OVERWRITE INTO TABLE results;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/drivers.csv' OVERWRITE INTO TABLE drivers;
+LOAD DATA INPATH '/user/wellington_leal/datasets/drivers.csv' OVERWRITE INTO TABLE drivers;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/constructors.csv' OVERWRITE INTO TABLE constructors;
+LOAD DATA INPATH '/user/wellington_leal/datasets/constructors.csv' OVERWRITE INTO TABLE constructors;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/circuits.csv' OVERWRITE INTO TABLE circuits;
+LOAD DATA INPATH '/user/wellington_leal/datasets/circuits.csv' OVERWRITE INTO TABLE circuits;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/qualifying.csv' OVERWRITE INTO TABLE qualifying;
+LOAD DATA INPATH '/user/wellington_leal/datasets/qualifying.csv' OVERWRITE INTO TABLE qualifying;
+
+LOAD DATA LOCAL INPATH '/home/wellington_leal/datasets/engines.csv' OVERWRITE INTO TABLE engines;
+LOAD DATA INPATH '/user/wellington_leal/datasets/engines.csv' OVERWRITE INTO TABLE engines;
+

@@ -1,0 +1,108 @@
+#Criação do database
+create database db_formula1
+
+CREATE TABLE races (
+    raceId INT,
+    year INT,
+    round INT,
+    circuitId INT,
+    name STRING,
+    races_date DATE,
+    races_time STRING,
+    url STRING,
+    fp1_date STRING,
+    fp1_time STRING,
+    fp2_date STRING,
+    fp2_time STRING,
+    fp3_date STRING,
+    fp3_time STRING,
+    quali_date STRING,
+    quali_time STRING,
+    sprint_date STRING,
+    sprint_time STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+CREATE TABLE results (
+    resultId INT,
+    raceId INT,
+    driverId INT,
+    constructorId INT,
+    number STRING,
+    grid INT,
+    position INT,
+    positionText STRING,
+    positionOrder INT,
+    points FLOAT,
+    laps INT,
+    results_time STRING,
+    milliseconds INT,
+    fastestLap INT,
+    rank STRING,
+    fastestLapTime STRING,
+    fastestLapSpeed STRING,
+    statusId INT
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+CREATE TABLE drivers (
+    driverId INT,
+    driverRef STRING,
+    number STRING,
+    code STRING,
+    forename STRING,
+    surname STRING,
+    dob DATE,
+    nationality STRING,
+    url STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+CREATE TABLE constructors (
+    constructorId INT,
+    constructorRef STRING,
+    name STRING,
+    nationality STRING,
+    url STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+CREATE TABLE circuits (
+    circuitId INT,
+    circuitRef STRING,
+    name STRING,
+    location STRING,
+    country STRING,
+    lat FLOAT,
+    lng FLOAT,
+    alt FLOAT,
+    url STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+CREATE TABLE qualifying (
+    qualifyId INT,
+    raceId INT,
+    driverId INT,
+    constructorId INT,
+    number STRING,
+    position INT,
+    q1 STRING,
+    q2 STRING,
+    q3 STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE;
+
+
